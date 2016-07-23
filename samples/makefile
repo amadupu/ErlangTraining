@@ -1,16 +1,27 @@
 .SUFFIXES: .erl .beam
 
-.erl.beam:
-	erlc -W $<
+EBIN 	= ebin
+SRC  	= src
+INCLUDE = include
+PRIV    = priv
+
+EFLAGS	= -I include
+
+$(EBIN)/%.beam:$(SRC)/%.erl
+	erlc -W -b beam -o $(EBIN) $(EFLAGS) $<
+
 ERL = erl -boot start_clean
 
-MODS = module1 module2 module3
+TARGETS = $(SOURCE:%.erl=$(EBIN)/%.beam)
+OBJS = $(SOURCE:%.erl=$(EBIN)/%.beam)
 
-all: compile
+SOURCE = process.erl
 
-${ERL} -pa '/home/joe/.../this/dir' -s module1 start
+all: $(TARGETS)
 
-compile: ${MODS:%=%.beam}
+
+app: $(TARGETS)
+	$(ERL) -pa $(EBIN)
 
 clean:
-	rm -rf *.beam erl_crash.dump
+	rm -f $(OBJS) erl_crash.dump
