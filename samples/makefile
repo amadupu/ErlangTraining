@@ -16,7 +16,9 @@ TARGETS = $(SOURCE:%.erl=$(EBIN)/%.beam)
 OBJS = $(SOURCE:%.erl=$(EBIN)/%.beam)
 
 SOURCE = process.erl \
-	client.erl
+	client.erl \
+        socket.erl \
+        testtables.erl
 
 all: $(TARGETS)
 
