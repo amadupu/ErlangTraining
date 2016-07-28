@@ -15,7 +15,8 @@ ERL = erl -boot start_clean
 TARGETS = $(SOURCE:%.erl=$(EBIN)/%.beam)
 OBJS = $(SOURCE:%.erl=$(EBIN)/%.beam)
 
-SOURCE = process.erl
+SOURCE = process.erl \
+	client.erl
 
 all: $(TARGETS)
 
@@ -23,5 +24,9 @@ all: $(TARGETS)
 app: $(TARGETS)
 	$(ERL) -pa $(EBIN)
 
+node1: $(TARGETS)
+	$(ERL) -pa $(EBIN) -sname masternode1 
+node2: $(TARGETS)
+	$(ERL) -pa $(EBIN) -sname masternode2 
 clean:
 	rm -f $(OBJS) erl_crash.dump
