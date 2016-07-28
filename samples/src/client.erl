@@ -2,6 +2,9 @@
 -module(client).
 -compile(export_all).
 
+
+%%
+
 start() ->
     Pid = self(),
     register(server, spawn(fun() -> loop(Pid) end)).
