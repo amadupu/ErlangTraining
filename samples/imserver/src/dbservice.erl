@@ -11,6 +11,7 @@ start() ->
 
 init(_Args) ->
    process_flag(trap_exit,true),
+   mnesia:start(),
    ok = mnesia:wait_for_tables([user],5000),
    {ok, []}.
 

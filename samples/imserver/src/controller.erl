@@ -6,7 +6,7 @@
 -include("tables.hrl").
 
 start(Port) ->
-   gen_server:start_link({global,?MODULE},?MODULE,Port,[]).
+   gen_server:start_link({local,?MODULE},?MODULE,Port,[]).
 
 init(Port = _Args) ->
    process_flag(trap_exit,true),
@@ -16,8 +16,11 @@ init(Port = _Args) ->
 
 
 accept_handler(LSock) ->
-   CPid = global:whereis(?MODULE),
-   link(CPid),
+   case whereis(?MODULE) of
+       Pid when is_pid(Pid) -> 
+             link(Pid);
+       Any -> io:format("~p not registered ~p~n",[?MODULE,Any])
+   end,
    gen_server:cast(?MODULE, {change_state,self()}),
    {ok, Socket} = gen_tcp:accept(LSock),
    inet:setopts(Socket,[{active,once}]),
