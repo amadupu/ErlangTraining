@@ -1,0 +1,13 @@
+{"Two",
+ [{"One",[],
+   [{load_object_code,{imserver,"2",[controller,dbservice,client]}},
+    point_of_no_return,
+    {load,{controller,brutal_purge,brutal_purge}},
+    {load,{dbservice,brutal_purge,brutal_purge}},
+    {load,{client,brutal_purge,brutal_purge}}]}],
+ [{"One",[],
+   [{load_object_code,{imserver,"1",[controller,dbservice,client]}},
+    point_of_no_return,
+    {load,{controller,brutal_purge,brutal_purge}},
+    {load,{dbservice,brutal_purge,brutal_purge}},
+    {load,{client,brutal_purge,brutal_purge}}]}]}.

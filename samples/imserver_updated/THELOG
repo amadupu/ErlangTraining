@@ -1,0 +1,181 @@
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:22 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.37.0>},
+                       {id,alarm_handler},
+                       {mfargs,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:22 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.38.0>},
+                       {id,overload},
+                       {mfargs,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:22 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.36.0>},
+                       {id,sasl_safe_sup},
+                       {mfargs,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:22 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.39.0>},
+                       {id,release_handler},
+                       {mfargs,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:22 ===
+         application: sasl
+          started_at: nonode@nohost
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_sup}
+             started: [{pid,<0.50.0>},
+                       {id,mnesia_event},
+                       {mfargs,{mnesia_sup,start_event,[]}},
+                       {restart_type,permanent},
+                       {shutdown,30000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.52.0>},
+                       {id,mnesia_monitor},
+                       {mfargs,{mnesia_monitor,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.53.0>},
+                       {id,mnesia_subscr},
+                       {mfargs,{mnesia_subscr,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.54.0>},
+                       {id,mnesia_locker},
+                       {mfargs,{mnesia_locker,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.55.0>},
+                       {id,mnesia_recover},
+                       {mfargs,{mnesia_recover,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,180000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.57.0>},
+                       {id,dets_sup},
+                       {mfargs,{dets_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.58.0>},
+                       {id,dets},
+                       {mfargs,{dets_server,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.62.0>},
+                       {id,disk_log_sup},
+                       {mfargs,{disk_log_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.63.0>},
+                       {id,disk_log_server},
+                       {mfargs,{disk_log_server,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.56.0>},
+                       {id,mnesia_tm},
+                       {mfargs,{mnesia_tm,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,30000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.74.0>},
+                       {id,mnesia_checkpoint_sup},
+                       {mfargs,{mnesia_checkpoint_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.75.0>},
+                       {id,mnesia_snmp_sup},
+                       {mfargs,{mnesia_snmp_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.76.0>},
+                       {id,mnesia_controller},
+                       {mfargs,{mnesia_controller,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.77.0>},
+                       {id,mnesia_late_loader},
+                       {mfargs,{mnesia_late_loader,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+          supervisor: {local,mnesia_sup}
+             started: [{pid,<0.51.0>},
+                       {id,mnesia_kernel_sup},
+                       {mfargs,{mnesia_kernel_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 31-Jul-2016::10:30:33 ===
+         application: mnesia
+          started_at: nonode@nohost

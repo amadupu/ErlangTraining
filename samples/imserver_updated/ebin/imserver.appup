@@ -1,0 +1,7 @@
+
+{ 
+  "2",
+  [{"1", [{load_module, controller},{load_module, dbservice} , {load_module, client}]}],
+  [{"1", [{load_module, controller},{load_module, dbservice} , {load_module, client}]}]
+}.
+

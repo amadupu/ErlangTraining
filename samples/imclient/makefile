@@ -38,7 +38,7 @@ rel: $(TARGETS)
 	$(ERL_REL) -mnesia dir $(REL_PRIV)
 
 app: $(TARGETS)
-	$(ERL) -pa $(EBIN) -mnesia dir $(PRIV) -eval "application:start(imserver)"
+	$(ERL) -pa $(EBIN) -mnesia dir $(PRIV)
 
 node1: $(TARGETS)
 	$(ERL) -pa $(EBIN) -sname masternode1 

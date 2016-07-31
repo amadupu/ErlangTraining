@@ -1,0 +1,9 @@
+{
+  release , {"imserver_rel", "Two"} , {erts, "7.3"},
+  [
+    {kernel,   "4.2"},
+    {stdlib,   "2.8"},
+    {sasl  ,   "2.7"},
+    {imserver, "2"}
+  ]
+}.
